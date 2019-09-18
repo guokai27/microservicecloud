@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/service-api/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-client/pom.xml" />
         <option value="$PROJECT_DIR$/client-two/pom.xml" />
+        <option value="$PROJECT_DIR$/service-ribbon/pom.xml" />
       </list>
     </option>
   </component>
