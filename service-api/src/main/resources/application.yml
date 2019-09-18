@@ -1,0 +1,18 @@
+server:
+  port: 8761
+
+eureka:
+  server:
+    # 自我保护机制，没检测到心跳会把服务关掉，这边先粗暴把这个机制关掉
+    # enableSelfPreservation: false
+    # 心跳比例，收到75%的心跳就是正常的
+    renewalPercentThreshold: 0.75
+  instance:
+    hostname: localhost
+  client:
+    # 通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
